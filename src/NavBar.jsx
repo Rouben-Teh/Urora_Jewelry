@@ -8,7 +8,9 @@ function Navbar() {
   return (
     <nav className="sticky top-0 z-50 h-12 px-10 bg-[#FFD5A3]">
       <div className="flex items-center justify-center h-full">
-        <h3 className="font-italianno text-4xl">Urora</h3>
+        <a href="#" className="font-italianno text-4xl">
+          Urora
+        </a>
         <ul className="flex flex-1 gap-6 text-md h-full justify-end items-center max-md:hidden">
           <li>
             <a href="#about">About Us</a>

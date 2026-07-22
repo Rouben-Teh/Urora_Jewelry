@@ -82,7 +82,10 @@ export default function MusicPlayer({ path }) {
           ${playing ? "animate-spin [animation-duration:3s]" : ""}
         `}
       >
-        <img className="w-15 h-15" src="/vinyl.png" />
+        <img
+          className="w-15 h-15"
+          src={`${import.meta.env.BASE_URL}/vinyl.png`}
+        />
       </div>
     </div>
   );

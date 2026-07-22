@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="flex flex-row">
               <img
                 className="w-10 h-10"
-                src={"/Group 12.png"}
+                src={`${import.meta.env.BASE_URL}/Group 12.png`}
                 alt="urora-logo"
               />
               <h3 className="font-italianno text-4xl pt-1 pl-2">Urora</h3>
@@ -20,18 +20,21 @@ export default function Footer() {
 
           <div className="flex flex-col gap-2">
             <h3 className="text-xl font-bold">Navigation</h3>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-1">
               <div>
-                <a href="#">About us</a>
+                <a href="#about">About Us</a>
               </div>
               <div>
-                <a href="#">Products</a>
+                <a href="#product">Products</a>
               </div>
               <div>
-                <a href="#">Gallery</a>
+                <a href="#feature">Features</a>
               </div>
               <div>
-                <a href="#">Contact</a>
+                <a href="#gallery">Gallery</a>
+              </div>
+              <div>
+                <a href="#contact">Contact</a>
               </div>
             </nav>
           </div>

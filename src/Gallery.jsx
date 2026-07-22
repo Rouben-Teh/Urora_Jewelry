@@ -59,7 +59,7 @@ export default function Gallery() {
           <div key={img} className="aspect-4/3 rounded-3xl overflow-hidden">
             <img
               className="w-full h-full object-cover"
-              src={img}
+              src={`${import.meta.env.BASE_URL}/${img}`}
               alt="urora-jewelry"
             />
           </div>

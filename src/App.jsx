@@ -46,12 +46,12 @@ function App() {
 
   const slideData = [
     {
-      src: "/01b3bdd0-e39f-4c09-8f26-90e022c1ffa1.png",
+      src: `${import.meta.env.BASE_URL}/01b3bdd0-e39f-4c09-8f26-90e022c1ffa1.png`,
       title: ["Handcraft", "Series"],
     },
-    { src: "/1.png", title: ["Elegant", "Series"] },
+    { src: `${import.meta.env.BASE_URL}/1.png`, title: ["Elegant", "Series"] },
     {
-      src: "/3961bb343b9db0a3542ea5aa1fa3a00a.jpg",
+      src: `${import.meta.env.BASE_URL}/3961bb343b9db0a3542ea5aa1fa3a00a.jpg`,
       title: ["Collection", "Series"],
     },
   ];
@@ -75,6 +75,54 @@ function App() {
     </div>
   ));
 
+  const productData = [
+    { src: `${import.meta.env.BASE_URL}/4.png`, title: "Ear rings" },
+    { src: `${import.meta.env.BASE_URL}/5.png`, title: "Ring" },
+    { src: `${import.meta.env.BASE_URL}/6.png`, title: "Necklace" },
+  ];
+
+  const products = productData.map((s, i) => (
+    <div
+      key={i}
+      className="relative w-80 aspect-auto rounded-3xl overflow-hidden"
+    >
+      <img src={s.src} alt="urora-jewelry" />
+      <h2 className="absolute top-1/2 -translate-y-1/2 w-full text-center font-italianno text-6xl text-white">
+        {s.title}
+      </h2>
+    </div>
+  ));
+
+  const featureData = [
+    {
+      src: `${import.meta.env.BASE_URL}/Group 17.png`,
+      title: ["Tailor", "Made"],
+    },
+    {
+      src: `${import.meta.env.BASE_URL}/Group 18.png`,
+      title: ["Meticulously", "Handmade"],
+    },
+    {
+      src: `${import.meta.env.BASE_URL}/Group 20.png`,
+      title: ["Reasonable", "Price"],
+    },
+    {
+      src: `${import.meta.env.BASE_URL}/Group 19.png`,
+      title: ["1 Year", "Warranty"],
+    },
+  ];
+
+  const features = featureData.map((s, i) => (
+    <div key={i} className="flex flex-col w-40 items-center">
+      <img className="w-30 h-30 mb-2" src={s.src} alt="urora-jewelry" />
+      <h2 className="text-center text-2xl font-bold">
+        {s.title[0]}
+        <br />
+        {s.title[1]}
+      </h2>
+    </div>
+  ));
+
   return (
     <main id="main" className="w-full h-full">
       <Navbar />
@@ -91,7 +139,7 @@ function App() {
         <div className="relative mt-30 w-115 max-md:w-[80%] h-120 rounded-r-3xl bg-[#d972237e]">
           <img
             className="absolute top-5 left-1/4 max-md:left-1/12 rounded-3xl object-cover w-80 h-120"
-            src="/01b3bdd0-e39f-4c09-8f26-90e022c1ffa1.png"
+            src={`${import.meta.env.BASE_URL}/01b3bdd0-e39f-4c09-8f26-90e022c1ffa1.png`}
             alt="urora-jewelry"
           />
         </div>
@@ -125,24 +173,7 @@ function App() {
           for special pieces.
         </p>
         <div className="mt-10 w-full flex flex-row max-md:flex-col gap-10 items-center justify-center">
-          <div className="relative w-80 aspect-auto rounded-3xl overflow-hidden">
-            <img src="/4.png" alt="urora-jewelry" />
-            <h2 className="absolute top-1/2 -translate-y-1/2 w-full text-center font-italianno text-6xl text-white">
-              Ear rings
-            </h2>
-          </div>
-          <div className="relative w-80 aspect-auto rounded-3xl overflow-hidden">
-            <img src="/5.png" alt="urora-jewelry" />
-            <h2 className="absolute top-1/2 -translate-y-1/2 w-full text-center font-italianno text-6xl text-white">
-              Ring
-            </h2>
-          </div>
-          <div className="relative w-80 aspect-auto rounded-3xl overflow-hidden">
-            <img src="/6.png" alt="urora-jewelry" />
-            <h2 className="absolute top-1/2 -translate-y-1/2 w-full text-center font-italianno text-6xl text-white">
-              Necklace
-            </h2>
-          </div>
+          {products}
         </div>
       </section>
 
@@ -162,57 +193,7 @@ function App() {
         </div>
 
         <div className="grid grid-cols-2 max-sm:grid-cols-1 justify-items-center gap-5 p-20 justify-center items-center">
-          <div className="flex flex-col w-40 items-center">
-            <img
-              className="w-30 h-30 mb-2"
-              src="/Group 17.png"
-              alt="urora-jewelry"
-            />
-            <h2 className="text-center text-2xl font-bold">
-              Tailor
-              <br />
-              Made
-            </h2>
-          </div>
-
-          <div className="flex flex-col w-40 items-center">
-            <img
-              className="w-30 h-30 mb-2"
-              src="/Group 18.png"
-              alt="urora-jewelry"
-            />
-            <h2 className="text-center text-2xl font-bold">
-              Meticulously
-              <br />
-              Handmade
-            </h2>
-          </div>
-
-          <div className="flex flex-col w-40 items-center">
-            <img
-              className="w-30 h-30 mb-2"
-              src="/Group 20.png"
-              alt="urora-jewelry"
-            />
-            <h2 className="text-center text-2xl font-bold">
-              Reasonable
-              <br />
-              Price
-            </h2>
-          </div>
-
-          <div className="flex flex-col w-40 items-center">
-            <img
-              className="w-30 h-30 mb-2"
-              src="/Group 19.png"
-              alt="urora-jewelry"
-            />
-            <h2 className="text-center text-2xl font-bold">
-              1 Year
-              <br />
-              Warranty
-            </h2>
-          </div>
+          {features}
         </div>
       </section>
 
@@ -232,7 +213,7 @@ function App() {
         <div className="relative mt-30 w-115 max-md:w-[80%] h-120 rounded-r-3xl bg-[#d972237e]">
           <img
             className="absolute top-5 left-1/4 max-md:left-1/12 rounded-3xl object-cover w-80 h-120"
-            src="/3d3204429fce490d02d4d5b3c9428341 2.png"
+            src={`${import.meta.env.BASE_URL}/3d3204429fce490d02d4d5b3c9428341 2.png`}
             alt="urora-jewelry"
           />
         </div>
@@ -261,7 +242,7 @@ function App() {
         </button>
       )}
 
-      <MusicPlayer path="/bgm.mp3" />
+      <MusicPlayer path={`${import.meta.env.BASE_URL}/bgm.mp3`} />
     </main>
   );
 }

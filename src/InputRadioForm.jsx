@@ -49,8 +49,8 @@ export default function InputRadioForm() {
             className="peer hidden"
             type="radio"
             name="choice"
-            value="option1"
-            checked={choice === "option1"}
+            value="Necklace"
+            checked={choice === "Necklace"}
             onChange={(e) => setChoice(e.target.value)}
           />
           <span className={customcheck}></span>
@@ -61,8 +61,8 @@ export default function InputRadioForm() {
             className="peer hidden"
             type="radio"
             name="choice"
-            value="option2"
-            checked={choice === "option2"}
+            value="Ring"
+            checked={choice === "Ring"}
             onChange={(e) => setChoice(e.target.value)}
           />
           <span className={customcheck}></span>
@@ -73,8 +73,8 @@ export default function InputRadioForm() {
             className="peer hidden"
             type="radio"
             name="choice"
-            value="option3"
-            checked={choice === "option3"}
+            value="Ear Rings"
+            checked={choice === "Ear Rings"}
             onChange={(e) => setChoice(e.target.value)}
           />
           <span className={customcheck}></span>
