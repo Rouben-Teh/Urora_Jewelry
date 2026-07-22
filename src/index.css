@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italianno&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Inria Serif", serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #974100;
+  background-color: #fff4e6;
+}
+
+h1 {
+  font-family: "Italianno", cursive;
+  font-size: 86px;
+  line-height: 1;
+}
+
+button {
+  padding: 10px 35px;
+  background-color: #d97223;
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #cc6b20;
+}
+
+@theme {
+  --font-italianno: "Italianno", cursive;
+}
+
+@media screen and (max-width: 769px) {
+  h1 {
+    font-size: 64px;
+  }
+}
