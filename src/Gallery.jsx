@@ -47,16 +47,17 @@ export default function Gallery() {
   };
 
   return (
-    <div className="flex justify-center items-center gap-10 px-20 max-md:px-0 py-10">
+    <div className="mx-auto flex w-full items-center justify-center gap-3 px-3 py-8 sm:gap-4 sm:px-6 md:gap-10 md:px-20 md:py-10">
       <button
-        className="flex w-10 h-10 p-3! justify-center items-center"
+        aria-label="Previous gallery image"
+        className="flex h-9 w-9 shrink-0 items-center justify-center p-0! md:h-10 md:w-10"
         onClick={prev}
       >
         <i className="fa-solid fa-arrow-left"></i>
       </button>
-      <div className="grid grid-cols-3 max-md:grid-cols-1 gap-10 max-md:gap-5">
+      <div className="grid min-w-0 flex-1 grid-cols-3 gap-5 max-md:grid-cols-1 md:gap-10">
         {visible.map((img) => (
-          <div key={img} className="aspect-4/3 rounded-3xl overflow-hidden">
+          <div key={img} className="aspect-4/3 w-full overflow-hidden rounded-3xl">
             <img
               className="w-full h-full object-cover"
               src={`${import.meta.env.BASE_URL}/${img}`}
@@ -67,7 +68,8 @@ export default function Gallery() {
       </div>
 
       <button
-        className="flex w-10 h-10 p-3! justify-center items-center"
+        aria-label="Next gallery image"
+        className="flex h-9 w-9 shrink-0 items-center justify-center p-0! md:h-10 md:w-10"
         onClick={next}
       >
         <i className="fa-solid fa-arrow-right"></i>

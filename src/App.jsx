@@ -199,7 +199,7 @@ function App() {
 
       <section id="gallery" className="w-full h-full pt-15 gap-10">
         <h1 className="text-center">Gallery</h1>
-        <div className="relative px-10 mt-5 h-full">
+        <div className="relative mt-5 h-full px-2 sm:px-10">
           <div className="absolute top-0 left-0 -z-10 w-full h-2/3 rounded-3xl bg-[#FFD5A3]"></div>
           <Gallery />
         </div>
