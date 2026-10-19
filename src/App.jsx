@@ -60,7 +60,7 @@ function App() {
     <div key={i} className="w-full h-full">
       <div className="absolute top-0 left-0 w-[40dvw] max-md:w-full h-full opacity-50 z-10 bg-[#D97223]"></div>
       <img
-        className="w-dvw h-dvh object-cover"
+        className="w-dvw h-svh object-cover"
         src={s.src}
         alt="urora-jewelry"
       />

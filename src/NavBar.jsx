@@ -37,7 +37,7 @@ function Navbar() {
             <i className="text-xl text-[#974100] fa-solid fa-bars"></i>
           </div>
           <div
-            className={`absolute top-0 left-0 w-dvw h-dvh flex ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} flex-col items-end p-5 gap-5 transition-all duration-500 ease-in bg-[#FFD5A3]`}
+            className={`absolute top-0 left-0 w-dvw h-svh flex ${menuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} flex-col items-end p-5 gap-5 transition-all duration-500 ease-in bg-[#FFD5A3]`}
           >
             <div
               className="flex cursor-pointer w-8 h-8 justify-center items-center rounded-lg hover:bg-[#d972237e]"

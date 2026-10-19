@@ -36,12 +36,12 @@ const Slider = ({ slides }) => {
   };
 
   return (
-    <div className="relative w-full h-[95dvh] m-auto overflow-hidden rounded-b-3xl">
+    <div className="relative w-full h-[95svh] m-auto overflow-hidden rounded-b-3xl">
       <div className="flex h-full transition duration-75 ease-in-out">
         {slides.map((slide, i) => (
           <div
             key={i}
-            className={`absolute top-0 left-0 w-dvw h-dvh opacity-0 transition-opacity duration-500  ${i === index ? "opacity-100" : ""}`}
+            className={`absolute top-0 left-0 w-dvw h-svh opacity-0 transition-opacity duration-500  ${i === index ? "opacity-100" : ""}`}
           >
             {slide}
           </div>
